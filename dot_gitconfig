@@ -1,0 +1,25 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Your Name
+	email = you@example.com
+[color]
+	ui = auto
+[core]
+	editor = emacs
+	excludesfile = ~/.gitglobalignore
+
+[alias]
+#	how do I trigger the autocompletion with git again?
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+        last = log -1 HEAD
+        unstage = reset HEAD --
+	
+	ls-new-files = ls-files -o --exclude-standard 
+        lg = log --graph --full-history --all --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+	loganl = log --pretty=format:'%Cred%h %C(bold blue) (%aN) %Cgreen(%cr) %Creset %s %C(yellow)%d'
+
+[push]
+	default = upstream
