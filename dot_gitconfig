@@ -21,5 +21,7 @@
         lg = log --graph --full-history --all --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
 	loganl = log --pretty=format:'%Cred%h %C(bold blue) (%aN) %Cgreen(%cr) %Creset %s %C(yellow)%d'
 
+        mybranches =  for-each-ref --color=always --sort=committerdate refs/heads/  --format='%(color:red) %(committerdate:short) %(color:green) %(refname:short)'
+        allmybranches =  for-each-ref --color=always --sort=committerdate refs/heads/ refs/remotes/origin/dev/alichnewsky  --format='%(color:red) %(committerdate:short) %(color:green) %(refname:short)
 [push]
 	default = upstream
